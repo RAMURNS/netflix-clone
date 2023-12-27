@@ -1,0 +1,27 @@
+---
+version: "3.8"
+services:
+  movies:
+    image:  ram0987/moviesnetflix:latest
+    ports:
+      - 91:80
+    deploy:
+      replicas: 3
+  train:
+    image: ram0987/trainnetflix:latest
+    ports:
+      - 92:80
+    deploy:
+      replicas: 3
+  recharge:
+    image:  ram0987/dthnetflix:latest
+    ports:
+      - 93:80
+    deploy:
+      replicas: 3
+  dth:
+    image:  ram0987/rechargenetflix:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
